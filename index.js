@@ -5,6 +5,9 @@ const app = express()
 
 app.use(fileUpload())
 app.use('/files', express.static(path.join(__dirname, 'files')))
+app.get('/', (req, res) => {
+	res.sendFile(path.join(__dirname + '/public/index.html'))
+})
 app.get('/', (req, res)=> res.send('Home'))
 app.post('/upload',(req,res) => {
 
