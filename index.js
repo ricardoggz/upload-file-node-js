@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 app.get('/', (req, res)=> res.send('Home'))
 app.post('/upload',(req,res) => {
 
-    let EDFile = req.files.file
+    let EDFile = req.files.student_license
 
     EDFile.mv(`./files/${EDFile.name}`,err => {
 
